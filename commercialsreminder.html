@@ -65,11 +65,11 @@ async function startGameTime() {
 	timer = 0;
 	startGameTimeButtonId.innerHTML = "Start game time"
   } else {
-    const response1 = await fetch("http://127.0.0.1:8088/api/?Function=StopCountdown&Input=2abcd1e7-0bb9-4503-a33b-138fe7307294");
-    const response2 = await fetch("http://127.0.0.1:8088/api/?Function=StartCountdown&Input=2abcd1e7-0bb9-4503-a33b-138fe7307294");
-	startGameTimeButtonId.innerHTML = "Stop game time"
+    // const response1 = await fetch("http://127.0.0.1:8088/api/?Function=StopCountdown&Input=2abcd1e7-0bb9-4503-a33b-138fe7307294");
+    // const response2 = await fetch("http://127.0.0.1:8088/api/?Function=StartCountdown&Input=2abcd1e7-0bb9-4503-a33b-138fe7307294");
+    startGameTimeButtonId.innerHTML = "Stop game time"
     setGameTime();
-	perSecondUpdate();
+    perSecondUpdate();
   }
 }
 

@@ -1,1 +1,2 @@
 # commercialsReminder
+Todo: play sound on iOS ( IOS on mobile disable automatic sound playing by default. So to get around this problem. You could put enable/disable switch button somewhere on the page and play some sound using an audio element("audioElement") if the user click the button switch. After that, the same "audioElement" can be used to play future sounds by changing its "src" attribute and call its "play()" method, without any further user interaction.)

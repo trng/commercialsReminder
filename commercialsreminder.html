@@ -18,11 +18,14 @@ var gameStartAstronomicTime = new Date();
 var timer = 0;
 const parser = new DOMParser();
 const errTdId = document.getElementById('errTdId');
+const errTdId2 = document.getElementById('errTdId2');
 const startGameTimeButtonId = document.getElementById('startGameTimeButtonId');
 const currentGameTimeDiv = document.getElementById('currentGameTimeDivID');
 var youAreHereDIV;
 var playBeep = false;
-
+const minutesList = document.getElementById('minutesListID');
+const commercialsTimeLine = document.getElementById('commercialsTimeLineID');
+var nextCommercial;
 
 async function perSecondUpdate() {
   const diffTime = Math.abs(new Date().getTime() - gameStartAstronomicTime.getTime());
@@ -73,12 +76,8 @@ async function startGameTime() {
   }
 }
 
-const minutesList = document.getElementById('minutesListID');
-const commercialsTimeLine = document.getElementById('commercialsTimeLineID');
-var nextCommercial;
-
-
 function setMinutesList() {
+	if ( minutesList.value.replace(/[0-9\ ]/g,'').length > 0 ) { minutesList.style.color = "red"; errTdId2.innerHTML = 'Minutes list format mismatch (example: 3 5 15 45)'; return; }
 	minutesListArr = minutesList.value.trim().split(/\s+/);
 	currentMinutes = parseInt(currentGameTimeDiv.innerHTML.split(':')[0]);
 	let str = '';

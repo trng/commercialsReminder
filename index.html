@@ -34,8 +34,8 @@ async function perSecondUpdate() {
   curr_secs = curr_sec_total % 60;
   currentGameTimeDiv.innerHTML = curr_mins.toString().padStart(2,'0') + ':' + curr_secs.toString().padStart(2,'0');
   //const response1 = await fetch("http://127.0.0.1:8088/api/");
-  xmlStr = await response1.text();
-  const xmlDoc = parser.parseFromString(xmlStr,"text/xml");
+  // xmlStr = await response1.text();
+  //const xmlDoc = parser.parseFromString(xmlStr,"text/xml");
   // console.log("vmix timer: ", xmlDoc.querySelector("vmix inputs input text").innerHTML);
   youAreHereDIV.innerHTML = currentGameTimeDiv.innerHTML + "  <<<  You are here"
   if ( nextCommercial && (curr_mins == nextCommercial.innerHTML) ) {
